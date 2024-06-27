@@ -95,8 +95,9 @@ static ssize_t sort_read(struct file *file,
 
     // printk("workqueue measuring..\n");
     start_measure();
-    sort_main(sort_buffer, size / es, es, num_compare);  // Assume sort_main
-    sorts the data end_measure();
+    sort_main(sort_buffer, size / es, es,
+              num_compare);  // Assume sort_main sorts the data
+    end_measure();
 
     // Process the data in a kernel thread
     // struct task_struct *task;
