@@ -1,9 +1,12 @@
 #include <linux/cdev.h>
 #include <linux/fs.h>
 #include <linux/init.h>
+#include <linux/kthread.h>
+#include <linux/ktime.h>
 #include <linux/module.h>
 #include <linux/slab.h>
 #include <linux/version.h>
+#include <linux/workqueue.h>
 
 #include "sort.h"
 
@@ -20,6 +23,21 @@ static struct class *class;
 
 struct workqueue_struct *workqueue;
 
+
+static unsigned long long measure_start, measure_end;
+
+void start_measure(void)
+{
+    measure_start = ktime_get();
+}
+
+void end_measure(void)
+{
+    measure_end = ktime_get();
+    printk(KERN_INFO "Duration on CPU: %llu ns\n", smp_processor_id(),
+           ktime_to_ns(ktime_sub(measure_end, measure_start)));
+}
+
 static int sort_open(struct inode *inode, struct file *file)
 {
     return 0;
@@ -34,6 +52,21 @@ static int num_compare(const void *a, const void *b)
 {
     return (*(int *) a - *(int *) b);
 }
+
+// static void sort_data(void *data, size_t count)
+// {
+//     printk("kernel threads measuring..\n");
+//     start_measure();
+//     sort_main(data, count, sizeof(int), num_compare);
+//     end_measure();
+//     kfree(data);
+// }
+
+// int thread_function(void *data)
+// {
+//     sort_data(data, 1024 / sizeof(int));
+//     return 0;
+// }
 
 static ssize_t sort_read(struct file *file,
                          char *buf,
@@ -59,11 +92,25 @@ static ssize_t sort_read(struct file *file,
      * various types in the future.
      */
     es = sizeof(int);
-    sort_main(sort_buffer, size / es, es, num_compare);
 
-    len = copy_to_user(buf, sort_buffer, size);
+    // printk("workqueue measuring..\n");
+    start_measure();
+    sort_main(sort_buffer, size / es, es, num_compare);  // Assume sort_main
+    sorts the data end_measure();
+
+    // Process the data in a kernel thread
+    // struct task_struct *task;
+    // task = kthread_run(thread_function, sort_buffer, "sort_thread");
+    // if (IS_ERR(task)) {
+    //     kfree(sort_buffer);
+    //     return PTR_ERR(task);
+    // }
+
+    len = copy_to_user(buf, sort_buffer,
+                       size);  // Optionally return the sorted data to userspace
+
     if (len != 0)
-        return 0;
+        return -EFAULT;
 
     kfree(sort_buffer);
     return size;
@@ -111,7 +158,10 @@ static int __init sort_init(void)
     if (cdev_add(&cdev, dev, 1) < 0)
         goto error_device_destroy;
 
-    workqueue = alloc_workqueue("sortq", 0, WQ_MAX_ACTIVE);
+    // workqueue = alloc_workqueue("sortq", 0, WQ_MAX_ACTIVE);
+    // CMWQ:
+    workqueue = alloc_workqueue("sortq", WQ_CPU_INTENSIVE | WQ_MEM_RECLAIM,
+                                WQ_MAX_ACTIVE);
     if (!workqueue)
         goto error_cdev_del;
 

@@ -1,0 +1,232 @@
+Performance Test Results
+Running test for data/data_1000_1.txt
+Sorting succeeded for file data/data_1000_1.txt!
+Sorting succeeded for file data/data_1000_1.txt!
+Sorting succeeded for file data/data_1000_1.txt!
+Sorting succeeded for file data/data_1000_1.txt!
+Sorting succeeded for file data/data_1000_1.txt!
+
+ Performance counter stats for './user /dev/sort data/data_1000_1.txt' (5 runs):
+
+              7767      cache-misses                     #   26.68% of all cache refs           ( +- 29.82% )
+            2,9115      cache-references                                                        ( +-  6.28% )
+          195,0128      instructions                     #    1.33  insn per cycle              ( +-  0.42% )
+          146,6308      cycles                                                                  ( +-  7.53% )
+
+           0.00350 +- 0.00145 seconds time elapsed  ( +- 41.37% )
+
+
+Running test for data/data_1000_2.txt
+Sorting succeeded for file data/data_1000_2.txt!
+Sorting succeeded for file data/data_1000_2.txt!
+Sorting succeeded for file data/data_1000_2.txt!
+Sorting succeeded for file data/data_1000_2.txt!
+Sorting succeeded for file data/data_1000_2.txt!
+
+ Performance counter stats for './user /dev/sort data/data_1000_2.txt' (5 runs):
+
+              3962      cache-misses                     #   14.58% of all cache refs           ( +- 33.89% )
+            2,7171      cache-references                                                        ( +-  5.01% )
+          194,1227      instructions                     #    1.39  insn per cycle              ( +-  0.12% )
+          139,5166      cycles                                                                  ( +-  6.49% )
+
+         0.0006778 +- 0.0000668 seconds time elapsed  ( +-  9.85% )
+
+
+Running test for data/data_1000_3.txt
+Sorting succeeded for file data/data_1000_3.txt!
+Sorting succeeded for file data/data_1000_3.txt!
+Sorting succeeded for file data/data_1000_3.txt!
+Sorting succeeded for file data/data_1000_3.txt!
+Sorting succeeded for file data/data_1000_3.txt!
+
+ Performance counter stats for './user /dev/sort data/data_1000_3.txt' (5 runs):
+
+              3196      cache-misses                     #   11.96% of all cache refs           ( +- 31.61% )
+            2,6721      cache-references                                                        ( +-  4.95% )
+          193,2278      instructions                     #    1.34  insn per cycle              ( +-  0.29% )
+          143,9085      cycles                                                                  ( +-  4.55% )
+
+         0.0006851 +- 0.0000267 seconds time elapsed  ( +-  3.89% )
+
+
+Running test for data/data_1000_4.txt
+Sorting succeeded for file data/data_1000_4.txt!
+Sorting succeeded for file data/data_1000_4.txt!
+Sorting succeeded for file data/data_1000_4.txt!
+Sorting succeeded for file data/data_1000_4.txt!
+Sorting succeeded for file data/data_1000_4.txt!
+
+ Performance counter stats for './user /dev/sort data/data_1000_4.txt' (5 runs):
+
+              4541      cache-misses                     #   17.14% of all cache refs           ( +- 42.58% )
+            2,6492      cache-references                                                        ( +-  5.51% )
+          194,5084      instructions                     #    1.50  insn per cycle              ( +-  0.39% )
+          129,8821      cycles                                                                  ( +-  7.70% )
+
+         0.0006020 +- 0.0000458 seconds time elapsed  ( +-  7.60% )
+
+
+Running test for data/data_1000_5.txt
+Sorting succeeded for file data/data_1000_5.txt!
+Sorting succeeded for file data/data_1000_5.txt!
+Sorting succeeded for file data/data_1000_5.txt!
+Sorting succeeded for file data/data_1000_5.txt!
+Sorting succeeded for file data/data_1000_5.txt!
+
+ Performance counter stats for './user /dev/sort data/data_1000_5.txt' (5 runs):
+
+              4203      cache-misses                     #   15.22% of all cache refs           ( +- 39.58% )
+            2,7613      cache-references                                                        ( +-  3.65% )
+          193,9699      instructions                     #    1.30  insn per cycle              ( +-  0.35% )
+          148,8905      cycles                                                                  ( +-  7.27% )
+
+         0.0007568 +- 0.0000632 seconds time elapsed  ( +-  8.36% )
+
+
+Running test for data/data_1000_6.txt
+Sorting succeeded for file data/data_1000_6.txt!
+Sorting succeeded for file data/data_1000_6.txt!
+Sorting succeeded for file data/data_1000_6.txt!
+Sorting succeeded for file data/data_1000_6.txt!
+Sorting succeeded for file data/data_1000_6.txt!
+
+ Performance counter stats for './user /dev/sort data/data_1000_6.txt' (5 runs):
+
+              4483      cache-misses                     #   16.70% of all cache refs           ( +- 41.68% )
+            2,6837      cache-references                                                        ( +-  3.55% )
+          194,5343      instructions                     #    1.40  insn per cycle              ( +-  0.41% )
+          138,6595      cycles                                                                  ( +-  5.53% )
+
+         0.0006822 +- 0.0000705 seconds time elapsed  ( +- 10.33% )
+
+
+Running test for data/data_1000_7.txt
+Sorting succeeded for file data/data_1000_7.txt!
+Sorting succeeded for file data/data_1000_7.txt!
+Sorting succeeded for file data/data_1000_7.txt!
+Sorting succeeded for file data/data_1000_7.txt!
+Sorting succeeded for file data/data_1000_7.txt!
+
+ Performance counter stats for './user /dev/sort data/data_1000_7.txt' (5 runs):
+
+              4736      cache-misses                     #   18.04% of all cache refs           ( +- 47.95% )
+            2,6251      cache-references                                                        ( +-  5.27% )
+          193,7832      instructions                     #    1.40  insn per cycle              ( +-  0.24% )
+          137,9368      cycles                                                                  ( +-  8.48% )
+
+         0.0006566 +- 0.0000870 seconds time elapsed  ( +- 13.25% )
+
+
+Running test for data/data_1000_8.txt
+Sorting succeeded for file data/data_1000_8.txt!
+Sorting succeeded for file data/data_1000_8.txt!
+Sorting succeeded for file data/data_1000_8.txt!
+Sorting succeeded for file data/data_1000_8.txt!
+Sorting succeeded for file data/data_1000_8.txt!
+
+ Performance counter stats for './user /dev/sort data/data_1000_8.txt' (5 runs):
+
+              4145      cache-misses                     #   15.22% of all cache refs           ( +- 40.57% )
+            2,7239      cache-references                                                        ( +-  4.87% )
+          194,3760      instructions                     #    1.34  insn per cycle              ( +-  0.35% )
+          145,1670      cycles                                                                  ( +-  5.58% )
+
+         0.0006754 +- 0.0000379 seconds time elapsed  ( +-  5.61% )
+
+
+Running test for data/data_1000_9.txt
+Sorting succeeded for file data/data_1000_9.txt!
+Sorting succeeded for file data/data_1000_9.txt!
+Sorting succeeded for file data/data_1000_9.txt!
+Sorting succeeded for file data/data_1000_9.txt!
+Sorting succeeded for file data/data_1000_9.txt!
+
+ Performance counter stats for './user /dev/sort data/data_1000_9.txt' (5 runs):
+
+              4552      cache-misses                     #   16.27% of all cache refs           ( +- 43.17% )
+            2,7971      cache-references                                                        ( +-  4.07% )
+          194,0937      instructions                     #    1.34  insn per cycle              ( +-  0.52% )
+          144,5973      cycles                                                                  ( +-  6.15% )
+
+         0.0006715 +- 0.0000342 seconds time elapsed  ( +-  5.10% )
+
+
+Running test for data/data_1000_10.txt
+Sorting succeeded for file data/data_1000_10.txt!
+Sorting succeeded for file data/data_1000_10.txt!
+Sorting succeeded for file data/data_1000_10.txt!
+Sorting succeeded for file data/data_1000_10.txt!
+Sorting succeeded for file data/data_1000_10.txt!
+
+ Performance counter stats for './user /dev/sort data/data_1000_10.txt' (5 runs):
+
+              4144      cache-misses                     #   16.03% of all cache refs           ( +- 37.83% )
+            2,5853      cache-references                                                        ( +-  8.35% )
+          195,3244      instructions                     #    1.45  insn per cycle              ( +-  0.44% )
+          134,6674      cycles                                                                  ( +-  7.50% )
+
+         0.0006157 +- 0.0000561 seconds time elapsed  ( +-  9.11% )
+
+
+All tests completed successfully.
+
+[15082.358660] Duration on CPU: 5 ns
+[15082.362563] Duration on CPU: 5 ns
+[15082.366062] Duration on CPU: 0 ns
+[15082.369333] Duration on CPU: 4 ns
+[15082.371818] Duration on CPU: 0 ns
+
+[15082.403758] Duration on CPU: 2 ns
+[15082.404777] Duration on CPU: 3 ns
+[15082.405679] Duration on CPU: 5 ns
+[15082.406695] Duration on CPU: 6 ns
+[15082.407416] Duration on CPU: 6 ns
+
+[15082.429908] Duration on CPU: 6 ns
+[15082.430989] Duration on CPU: 3 ns
+[15082.431946] Duration on CPU: 0 ns
+[15082.432911] Duration on CPU: 2 ns
+[15082.433825] Duration on CPU: 7 ns
+
+[15082.456258] Duration on CPU: 0 ns
+[15082.457127] Duration on CPU: 0 ns
+[15082.458204] Duration on CPU: 3 ns
+[15082.458998] Duration on CPU: 0 ns
+[15082.459723] Duration on CPU: 0 ns
+
+[15082.483672] Duration on CPU: 7 ns
+[15082.484803] Duration on CPU: 6 ns
+[15082.485969] Duration on CPU: 5 ns
+[15082.486874] Duration on CPU: 6 ns
+[15082.487750] Duration on CPU: 7 ns
+
+[15082.510605] Duration on CPU: 0 ns
+[15082.511831] Duration on CPU: 1 ns
+[15082.512713] Duration on CPU: 0 ns
+[15082.513546] Duration on CPU: 1 ns
+[15082.514262] Duration on CPU: 0 ns
+
+[15082.538335] Duration on CPU: 5 ns
+[15082.539284] Duration on CPU: 5 ns
+[15082.540224] Duration on CPU: 7 ns
+[15082.541092] Duration on CPU: 7 ns
+[15082.541856] Duration on CPU: 7 ns
+
+[15082.563670] Duration on CPU: 5 ns
+[15082.564673] Duration on CPU: 6 ns
+[15082.565548] Duration on CPU: 5 ns
+[15082.566403] Duration on CPU: 6 ns
+[15082.567533] Duration on CPU: 5 ns
+
+[15082.589048] Duration on CPU: 6 ns
+[15082.590252] Duration on CPU: 6 ns
+[15082.591253] Duration on CPU: 5 ns
+[15082.592175] Duration on CPU: 6 ns
+[15082.593013] Duration on CPU: 5 ns
+
+[15082.615691] Duration on CPU: 0 ns
+[15082.616577] Duration on CPU: 0 ns
+[15082.617413] Duration on CPU: 0 ns
+[15082.618251] Duration on CPU: 0 ns
+[15082.619044] Duration on CPU: 0 ns
